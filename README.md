@@ -55,3 +55,9 @@ There's a mix of required and optional fields that just extend the functionality
 | SENDGRID_API_KEY    |      | API key from sendgrid.com with Mail Send permission                       |
 | MAIL_TO             |      | Email address to send mail to                                             |
 | MAIL_FROM           |      | Email address to send mail from (configured with Sendgrid)                |
+
+### Changing Frequency / Schedule
+
+The Action uses cron to schedule when it will run. You can update that at the top of the workflow file:
+
+https://github.com/colbyfayock/revue-convertkit-sync/blob/main/.github/workflows/sync.yml#L5
