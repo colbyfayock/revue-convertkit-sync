@@ -1,4 +1,4 @@
-# Revue Convertkit Sync
+# 📩 Revue Convertkit Sync
 
 Uses GitHub Actions to run scheduled syncs between [Revue](https://www.getrevue.co) subscribers and [Convertkit](https://convertkit.com/).
 
