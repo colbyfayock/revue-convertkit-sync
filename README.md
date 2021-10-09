@@ -40,3 +40,18 @@ GitHub Actions are used as a scheduling mechanism that allows us to run that scr
 
 ## 🧑‍🚀 Getting Started
 
+### Configuration
+
+In order to use this repo you can simply clone, fork, or create a new repo from a templatee and do nothing else other than add environment variables via GitHub Secrets.
+
+There's a mix of required and optional fields that just extend the functionality of the script that gets ran.
+
+| Name                | Req? | Description                                                |
+| ------------------- | ---- | ---------------------------------------------------------- |
+| REVUE_API_KEY       | Yes  | API key from getrevue.co                                   |
+| CONVERTKIT_API_KEY  | Yes  | API key from convertkit.com                                |
+| CONVERTKIT_FORM_ID  | Yes  | Convertkit form ID (ex: 12345)                             |
+| CONVERTKIT_TAGS     |      | Convertkit tag IDs delimited by , (ex: 12345,54321)        |
+| SENDGRID_API_KEY    |      | API key from sendgrid.com with Mail Send permission        |
+| MAIL_TO             |      | Email address to send mail to                              |
+| MAIL_FROM           |      | Email address to send mail from (configured with Sendgrid) |
