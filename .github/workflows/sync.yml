@@ -1,0 +1,28 @@
+name: Update
+
+on:
+  schedule:
+    - cron: "0 14 * * *"
+  workflow_dispatch:
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      - run: yarn install --frozen-lockfile
+
+      - run: node src/main.js
+        env:
+          REVUE_API_KEY: ${{ secrets.REVUE_API_KEY }}
+          CONVERTKIT_API_KEY: ${{ secrets.CONVERTKIT_API_KEY }}
+          CONVERTKIT_FORM_ID: ${{ secrets.CONVERTKIT_FORM_ID }}
+          CONVERTKIT_TAGS: ${{ secrets.CONVERTKIT_TAGS }}
+          SENDGRID_API_KEY: ${{ secrets.SENDGRID_API_KEY }}
+          MAIL_TO: ${{ secrets.MAIL_TO }}
+          MAIL_FROM: ${{ secrets.MAIL_FROM }}
