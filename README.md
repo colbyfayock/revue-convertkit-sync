@@ -2,6 +2,8 @@
 
 Uses GitHub Actions to run scheduled syncs between [Revue](https://www.getrevue.co) subscribers and [Convertkit](https://convertkit.com/).
 
+> NOTE: RIP Revue http://help.getrevue.co/en/articles/6819675-we-ve-made-the-difficult-decision-to-shut-down-revue
+
 ## 🚀 Quickstart
 
 * Fork this repository or [create from template](https://github.com/colbyfayock/revue-convertkit-sync/generate)
